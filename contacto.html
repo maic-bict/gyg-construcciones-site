@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto — G y G Construcciones</title>
+  <meta name="description" content="Contacto: WhatsApp directo, formulario de contacto y correo. Atención rápida y seguimiento profesional. Cobertura: Todo Colombia.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="index.html">G y G Construcciones</a></h1>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="services.html">Servicios</a>
+        <a href="cotizar.html" class="btn">Solicitar cotización</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Contacto</h2>
+    <p>Estamos disponibles por varios canales. Selecciona el que prefieras:</p>
+
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <p>Chat directo para consultas rápidas y envío de fotos.</p>
+        <a href="https://wa.me/573208967267?text=Hola%20G%20y%20G%20-%20Solicito%20informaci%C3%B3n" target="_blank" class="btn">Enviar WhatsApp</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Formulario</h3>
+        <form id="contactForm" onsubmit="return false;" class="form-vertical">
+          <label>Nombre<input type="text" id="c_nombre" placeholder="Nombre" required /></label>
+          <label>Correo<input type="email" id="c_email" placeholder="Correo" required /></label>
+          <label>Teléfono<input type="tel" id="c_telefono" placeholder="+57 320 896 7267" /></label>
+          <label>Mensaje<textarea id="c_mensaje" placeholder="Escribe tu consulta"></textarea></label>
+          <div><button class="btn primary" id="contactSend">Enviar mensaje</button></div>
+        </form>
+        <p class="muted">También te responderemos por correo en menos de 24 horas.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Correo</h3>
+        <p>Envíanos documentación o solicitudes formales a:</p>
+        <p><a href="mailto:garciamaicolrojas28@gmail.com">garciamaicolrojas28@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section id="asistente" class="asistente-widget">
+      <h3>Asistente virtual</h3>
+      <p>¿Necesitas ayuda rápida? El asistente virtual puede guiarte en la cotización y recopilar datos básicos.</p>
+      <button class="btn" id="abrirAsistente">Abrir asistente</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2026 G y G Construcciones y Remodelaciones — Tel/WhatsApp: <a href="https://wa.me/573208967267" target="_blank" rel="noopener">+57 320 896 7267</a> — garciamaicolrojas28@gmail.com</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

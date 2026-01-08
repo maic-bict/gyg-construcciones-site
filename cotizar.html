@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cotizar — G y G Construcciones</title>
+  <meta name="description" content="Inicia tu cotización con nuestro sistema inteligente. Selecciona el servicio, ingresa área o cantidades y obtén una estimación preliminar. Cobertura: Todo Colombia.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="index.html">G y G Construcciones</a></h1>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="services.html">Servicios</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Calculadora de cotización preliminar</h2>
+    <p>Completa los campos para obtener una estimación rápida. Esta cotización es preliminar y será revisada por nuestro equipo.</p>
+
+    <form id="cotizacionForm" class="form-grid" onsubmit="return false;">
+      <label>
+        Servicio
+        <select id="servicio" name="servicio">
+          <option value="construccion">Construcción de viviendas</option>
+          <option value="concreto">Estructuras en concreto</option>
+          <option value="metalica">Estructuras metálicas</option>
+          <option value="remodelacion">Remodelación</option>
+          <option value="acabados">Acabados arquitectónicos</option>
+          <option value="cubiertas">Cubiertas y techos</option>
+          <option value="mantenimiento">Mantenimiento locativo</option>
+        </select>
+      </label>
+
+      <label>
+        Área aproximada (m²)
+        <input type="number" id="area" min="1" placeholder="Ej: 100" required />
+      </label>
+
+      <label>
+        Precio unitario (por m²) COP
+        <input type="number" id="precio" min="1" step="100" placeholder="Ej: 250000" required />
+        <small class="muted">Sugerimos dejar el precio por defecto para obtener una estimación</small>
+      </label>
+
+      <label>
+        Ciudad / zona
+        <input type="text" id="ciudad" placeholder="Ej: Girardot, Cundinamarca" />
+      </label>
+
+      <label>
+        Nombre de contacto
+        <input type="text" id="nombre" placeholder="Tu nombre" />
+      </label>
+
+      <label>
+        Teléfono / WhatsApp
+        <input type="tel" id="telefono" placeholder="+57 320 896 7267" />
+      </label>
+
+      <div class="form-actions">
+        <button class="btn primary" id="calcularBtn">Calcular estimación</button>
+        <button class="btn ghost" id="resetBtn" type="button">Restablecer</button>
+      </div>
+    </form>
+
+    <section id="resultado" class="resultado" style="display:none;">
+      <h3>Estimación preliminar</h3>
+      <p id="resumen"></p>
+      <p><strong>Valor estimado:</strong> <span id="valor">-</span> COP</p>
+      <div class="resultado-acciones">
+        <a id="enviarWhats" class="btn" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        <button class="btn primary" id="solicitarAsesor">Solicitar contacto de asesor</button>
+      </div>
+      <p class="nota">Esta es una estimación preliminar. El equipo técnico preparará una propuesta detallada con APU y memoria si se requiere.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2026 G y G Construcciones y Remodelaciones — Tel/WhatsApp: <a href="https://wa.me/573208967267" target="_blank" rel="noopener">+57 320 896 7267</a> — garciamaicolrojas28@gmail.com</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
